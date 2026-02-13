@@ -339,14 +339,14 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h2><i class="fa-solid fa-chart-pie"></i> B. Performance Goals (60%)</h2>
-                    <button type="button" class="btn btn-add" onclick="addKPIRow()"><i class="fa-solid fa-plus"></i> Add Goal</button>
+                    <h2><i class="fa-solid fa-chart-line"></i> B. Performance Goals (60%)</h2>
+                    <button type="button" class="btn btn-add" onclick="addKPIRow()"><i class="fa-solid fa-plus"></i> Add KPI</button>
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th class="col-obj">Objective</th>
-                            <th class="col-ind">Indicator</th>
+                            <th class="col-obj">KPI</th>
+                            <th class="col-ind">Goal</th>
                             <th class="col-evi">Evidence</th>
                             <th class="col-wgt">Weight %</th>
                             <th class="col-rat">Rating</th>
@@ -460,8 +460,8 @@
                 </div>
                 
                 <div class="grid-2" style="margin-bottom: 20px;">
-                    <div><label>Key Strengths</label><textarea name="strengths" rows="2"></textarea></div>
-                    <div><label>Areas for Improvement</label><textarea name="areas_for_improvement" rows="2"></textarea></div>
+                    <div><label>Key Strengths</label><textarea name="strengths" rows="3"></textarea></div>
+                    <div><label>Areas for Improvement</label><textarea name="areas_for_improvement" rows="3"></textarea></div>
                 </div>
 
                 <table>
@@ -470,7 +470,7 @@
                             <th>Improvement Area</th>
                             <th>Activity</th>
                             <th>Target Date</th>
-                            <th>Success Criteria</th>
+                            <th>Criteria</th>
                             <th>Status</th>
                             <th class="col-act"></th>
                         </tr>
@@ -579,8 +579,8 @@
         const tbody = document.getElementById('kpiBody');
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><input type="text" name="kpi_objective[]" value="${obj}" placeholder="Objective" style="font-weight:600;"></td>
-            <td><input type="text" name="kpi_indicator[]" value="${ind}" placeholder="Indicator"></td>
+            <td><input type="text" name="kpi_objective[]" value="${obj}" placeholder="KPI" style="font-weight:600;"></td>
+            <td><input type="text" name="kpi_indicator[]" value="${ind}" placeholder="Goal"></td>
             <td><textarea name="kpi_evidence[]" placeholder="Evidence" rows="1"></textarea></td>
             <td><input type="number" name="kpi_weight[]" class="kpi-weight" value="${weight}" onchange="calcAll()"></td>
             <td><input type="number" name="kpi_rating[]" class="kpi-rating" min="1" max="5" step="0.5" value="${rating}" onchange="calcAll()"></td>
